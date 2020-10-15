@@ -58,7 +58,6 @@ div.rtf h3{font-size:1em; line-height:1em; font-weight:300;   margin:0 0 5em 0; 
 div.rtf h4{font-size:2.5em; font-style:italic; line-height:1.8em; font-weight:200;   margin:0 0 0.8em 0;text-align: center}
 
 
-
 div.rtf hr{width:30%; text-align:center; border:none; height:4px; background:#A21818; color:#A21818; margin:4em auto;}
 
 ul{margin:0 0 0.8em 0; line-height:1.8em; font-weight:400; list-style-type:disc; text-align: center; font-size:1.8em; font-style:italic}
@@ -66,4 +65,5 @@ ul li{margin:0 0 0 2em;font-weight:300; font-size:1.8em; font-style:italic}
 
 ol{margin:0 0 0.8em 0; line-height:1.8em; font-weight:400;  list-style-type:decimal; text-align: center}
 ol li{margin:0 0 0 2em;font-weight:300; font-size:1.8em; font-style:italic}
+
 /*Global styles end*/
