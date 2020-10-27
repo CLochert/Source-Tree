@@ -3,14 +3,19 @@
   <head>
 	  
 	  <title>Vogue Article</title>
+	  <script src="res/jquery.js"></script>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet">
       
 	  <style type="text/css" media="screen">@import url(res/global.css);
       body{padding:2em; margin:0;font-size:max(1en, 2vw); }
+		 
+		
+     
+		  
       div.header{max-width:1000px; margin:0 auto; text-align:center;}
       div.header hr{width:30%; color:#A21818; background:#A21818; border:none; height:2px; margin:5vw auto}
 
-      div.footer{max-width:1000px; padding:4vw 4vw}
+      
 		  
 	 div.content-holder{max-width:800px; margin:2vw auto ; }
       div.head-image img{width:100%; align:center; padding: 0 0 2vw 0}
@@ -30,21 +35,54 @@
 
 .column {flex: 100%;padding: 5px;
 }
-		
+		a.menubutton{display:block; background:url(res/menu.svg) no-repeat center center; background-size:15%; grid-column-start:1; display:none}
+      a.menubutton span{display:none;}
+
+
+      div.menu{grid-column-start:2; grid-column-end: 3; text-align:center; text-transform:uppercase; ;}
+      div.menu a{display:inline-block; padding:10px 20px; text-decoration:none;}
+      div.menu a:link{color:#333;}
+      div.menu a:visited{color:#333;}
+      div.menu a:hover{color:#A21818;}
+
+      @media only screen and (max-width: 800px) {
+        div.menu{grid-column-start:auto; grid-column-end:auto; position:fixed; top:80px; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8);
+        color:#fff; transition:all 0.5s;
+        }
+        div.menu a{display:block; padding:50px 20px; text-decoration:none; font-size:2em; border-bottom:1px solid #666;}
+        div.menu a:link{color:#eee;}
+        div.menu a:visited{color:#eee;}
+        div.menu a:hover{color:#A21818;}
+        div.hidden{left:-100%; right:100%;}
+        a.menubutton{display:block;}
 		  
+		  div.content{max-width:1200px; min-height:200vh; background:#fff; margin:0 auto; padding-top:150px;}
+	  
 	  </style>
-	  
-	  
-  </head>
+    <script>
+function menu()
+{
+  $('.menu').toggleClass('hidden');
+}
+    </script>
+ </head>
   <body>
+		 
+      <div class="header">
+		  <img src="res/1.png" width="250em" alt=""/>
+        <a href="javascript:menu()" class="menubutton"><span>Menu</span></a>
+       
+	
+	  
+		  
+
+<div class="menu hidden">
+        <p><a href="#">FASHION</a> <a href="#">BEAUTY</a> <a href="#">CULTURE</a> <a href="#">LIVING</a> <a href="#">RUNWAY</a> <a href="#">SHOPPING</a> <a href="#">VIDEO</a> <a href="#">HOPE</a></p>
+	 </div>
+   </div>
 		  
 	
-	  <div class="header-holder">
-      <div class="header">
-		  
-		  <img src="res/1.png" width="300em" alt=""/>
-
-        <p><a href="#">FASHION</a> <a href="#">BEAUTY</a> <a href="#">CULTURE</a> <a href="#">LIVING</a> <a href="#">RUNWAY</a> <a href="#">SHOPPING</a> <a href="#">VIDEO</a> <a href="#">HOPE</a></p>
+	<div class="content">
 
 <div class="rtf">
      <hr>
@@ -116,7 +154,7 @@
 <ul>Produced by Little Moon Productions</ul>
 	
 	
-      <div class="footer">
+      
 
         <p1><a href="#">NEWSLETTER</a> <a href="#">SUBSCRIBER</a></p>
 
